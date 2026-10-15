@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Жека кастомизация",
+  "version": "1.0.0.1",
+  "description": "Кастомизация Жеки FortPort",
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fortport.ru/*",
+        "https://*.fortport.ru/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
